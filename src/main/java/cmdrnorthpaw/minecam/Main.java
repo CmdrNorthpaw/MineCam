@@ -31,5 +31,6 @@ public final class Main extends JavaPlugin {
                player.sendMessage("If you are reading this, then my plugin works!");
             }
         }
+        return false;
     }
 }
