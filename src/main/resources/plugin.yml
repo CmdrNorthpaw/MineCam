@@ -1,0 +1,7 @@
+name: Minecraft
+version: "0.1"
+main: cmdrnorthpaw.minecam.Main
+api-version: "1.13"
+prefix: MINECAM
+authors: [CmdrNorthpaw]
+website: https://github.com/CmdrNorthpaw/Minecam
