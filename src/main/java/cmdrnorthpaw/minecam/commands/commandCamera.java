@@ -1,10 +1,7 @@
 package cmdrnorthpaw.minecam.commands;
 
-import com.sun.istack.internal.Nullable;
-import org.bukkit.Color;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -35,6 +32,7 @@ public class commandCamera implements CommandExecutor {
                 player.sendMessage("Camera mode deactivated");
                 player.teleport(position);
                 player.sendMessage("You were teleported back to your original location");
+                return true;
             }
 
         }
