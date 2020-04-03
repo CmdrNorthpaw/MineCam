@@ -40,7 +40,7 @@ public class commandCamera implements CommandExecutor {
         }
         else {
             sender.sendMessage("This command must be run as a player!");
+            return true;
         }
-        return false;
     }
 }
