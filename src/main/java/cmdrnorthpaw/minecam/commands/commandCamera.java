@@ -18,16 +18,18 @@ public class commandCamera implements CommandExecutor {
                 return true;
 
             }
-            Location position = player.getLocation();
-            player.setGameMode(GameMode.SPECTATOR);
-            player.sendMessage("Camera mode activated.");
-
+            if (!(player.getGameMode() == GameMode.SPECTATOR)) {
+                Location position = player.getLocation();
+                GameMode mode = player.getGameMode();
+                player.setGameMode(GameMode.SPECTATOR);
+                player.sendMessage("Camera mode activated.");
+                return true;
+            }
+            else {
+                player.sendMessage("You can't run this command as a spectator!");
+            }
 
         }
-
-
-
-
         return false;
     }
 }
