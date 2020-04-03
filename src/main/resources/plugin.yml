@@ -1,4 +1,4 @@
-name: Minecraft
+name: MineCam
 version: "0.1"
 main: cmdrnorthpaw.minecam.Main
 api-version: "1.13"
