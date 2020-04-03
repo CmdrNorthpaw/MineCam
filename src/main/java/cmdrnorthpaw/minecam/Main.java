@@ -1,5 +1,6 @@
 package cmdrnorthpaw.minecam;
 
+import cmdrnorthpaw.minecam.commands.commandCamera;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -10,6 +11,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        this.getCommand("camera").setExecutor(new commandCamera());
 
     }
 

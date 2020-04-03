@@ -5,3 +5,7 @@ api-version: "1.13"
 prefix: MINECAM
 authors: [CmdrNorthpaw]
 website: https://github.com/CmdrNorthpaw/Minecam
+commands:
+  camera:
+    description: Toggles camera mode
+    usage: /camera
