@@ -1,9 +1,8 @@
 package cmdrnorthpaw.minecam.commands;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
+import fr.mrmicky.fastparticle.FastParticle;
+import fr.mrmicky.fastparticle.ParticleType;
+import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -34,6 +33,8 @@ public class commandCamera implements CommandExecutor {
                 player.sendMessage(ChatColor.RED + "Camera mode deactivated");
                 if (!player.hasPermission("minecam.noTP")) {
                     player.teleport(position);
+                    player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 2F, 2F);
+                    FastParticle.spawnParticle(player, ParticleType.FLAME, player.getLocation(), 5);
                     player.sendMessage(ChatColor.DARK_PURPLE + "You were teleported back to your original location");
                 }
                 return true;
