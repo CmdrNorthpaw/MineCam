@@ -7,10 +7,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import java.util.HashMap;
+import java.util.Map;
 
 public class commandCamera implements CommandExecutor {
-    public static GameMode mode = GameMode.SURVIVAL;
-    public static Location position = new Location(Bukkit.getServer().getWorlds().get(0), 0.0, 0.00, 0.00);
+    Map gamemodeDict = new HashMap<String, GameMode>();
+    Map positionDict = new HashMap<String, Location>();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -22,17 +24,17 @@ public class commandCamera implements CommandExecutor {
 
             }
             if (!(player.getGameMode() == GameMode.SPECTATOR)) {
-                position = player.getLocation();
-                mode = player.getGameMode();
+                positionDict.put(player.getName(), player.getLocation());
+                gamemodeDict.put(player.getName(), player.getGameMode());
                 player.setGameMode(GameMode.SPECTATOR);
                 player.sendMessage(ChatColor.GREEN + "Camera mode activated.");
                 return true;
             }
             else {
-                player.setGameMode(mode);
+                player.setGameMode((GameMode) gamemodeDict.get(player.getName()));
                 player.sendMessage(ChatColor.RED + "Camera mode deactivated");
                 if (!player.hasPermission("minecam.noTP")) {
-                    player.teleport(position);
+                    player.teleport((Location) positionDict.get(player.getName()));
                     player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 2F, 1F);
                     FastParticle.spawnParticle(player, ParticleType.PORTAL, player.getLocation(), 50);
                     player.sendMessage(ChatColor.DARK_PURPLE + "You were teleported back to your original location");
