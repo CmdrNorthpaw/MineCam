@@ -33,8 +33,8 @@ public class commandCamera implements CommandExecutor {
                 player.sendMessage(ChatColor.RED + "Camera mode deactivated");
                 if (!player.hasPermission("minecam.noTP")) {
                     player.teleport(position);
-                    player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 2F, 2F);
-                    FastParticle.spawnParticle(player, ParticleType.FLAME, player.getLocation(), 5);
+                    player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 2F, 1F);
+                    FastParticle.spawnParticle(player, ParticleType.PORTAL, player.getLocation(), 50);
                     player.sendMessage(ChatColor.DARK_PURPLE + "You were teleported back to your original location");
                 }
                 return true;
