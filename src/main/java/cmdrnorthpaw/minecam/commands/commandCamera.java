@@ -7,6 +7,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,11 +30,13 @@ public class commandCamera implements CommandExecutor {
                 positionDict.put(player.getName(), player.getLocation());
                 gamemodeDict.put(player.getName(), player.getGameMode());
                 player.setGameMode(GameMode.SPECTATOR);
+                player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 999999, 0));
                 player.sendMessage(ChatColor.GREEN + "Camera mode activated.");
                 return true;
             }
             else {
                 player.setGameMode((GameMode) gamemodeDict.get(player.getName()));
+                player.removePotionEffect(PotionEffectType.NIGHT_VISION);
                 player.sendMessage(ChatColor.RED + "Camera mode deactivated");
                 if (!player.hasPermission("minecam.noTP")) {
                     player.teleport((Location) positionDict.get(player.getName()));
