@@ -22,8 +22,8 @@ For more info, you can look at [the TLDR Legal page for the MPL](https://tldrleg
 For support and to get new releases as quickly as possible, you can join the [MineCam Discord.](https://discord.gg/JfJ7R2X)
 
 ## Versioning
-To make life easier for server admins, the version numbers used by this plugin is compliant with the [Semantic Versioning System](https://semver.org) **TL;DR:**
+To make life easier for server admins, the version numbers used by this plugin is compliant with the [Semantic Versioning System](https://semver.org). **TL;DR:**
 * Each version number will be formatted like this: 1.0.0
-* The first number is rewrites (e.g. Minecraft version updates)
-* The second is feature updates
-* The third is patches (e.g. bug fixes.
+* The first number is rewrites (e.g. Minecraft version updates).
+* The second is feature updates.
+* The third is patches (e.g. bug fixes).
