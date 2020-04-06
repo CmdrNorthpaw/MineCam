@@ -17,12 +17,12 @@ This plugin is licensed under the Mozilla Public License 2.0, which basically me
 * If you use any code, the file that you use it in must be licensed under the MPL, however the project does not need to be.
 * You cannot get me into legal trouble for breaking anything, nor can you get me into trouble for not helping you fix it.
 
-For more info, you can look at [the TLDR Legal page for the MPL](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2).
+For more info, you can look at [the TLDR Legal page for the MPL.](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)
 ## Support
-For support and to get new releases as quickly as possible, you can join the [MineCam Discord.](https://discord.gg/JfJ7R2X). If you need to report a bug, please [open a new GitHub issue](https://github.com/CmdrNorthpaw/MineCam/issues/new)
+For support and to get new releases as quickly as possible, you can join the [MineCam Discord.](https://discord.gg/JfJ7R2X). If you need to report a bug, please [open a new GitHub issue.](https://github.com/CmdrNorthpaw/MineCam/issues/new)
 
 ## Versioning
-To make life easier for server admins, the version numbers used by this plugin is compliant with the [Semantic Versioning System](https://semver.org). **TL;DR:**
+To make life easier for server admins, the version numbers used by this plugin is compliant with the [Semantic Versioning System](https://semver.org.) **TL;DR:**
 * Each version number will be formatted like this: 1.0.0
 * The first number is rewrites (e.g. Minecraft version updates).
 * The second is feature updates.
