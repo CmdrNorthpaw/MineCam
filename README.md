@@ -10,4 +10,20 @@ Even though MineCam gets rid of a large part of the cheaty-ness of spectator mod
 * minecam.use - The basic permission. If players have this permission, they will be able to enter and exit camera mode
 * minecam.noTP - Players with this permission will not be teleported to their original locations when exiting camera mode but instead will simply drop into their original gamemode. Note that due to the way that Spigot permissions work, OPs have this ability whether they like it or not; there isn't anything I can do about it.
 
+## License
+This plugin is licensed under the Mozilla Public License 2.0, which basically means:
+* You may use the plugin on any server you like, no questions asked.
+* You can use all my code, but you're not allowed to use the name MineCam or say that you wrote it.
+* If you use any code, the file that you use it in must be licensed under the MPL, however the project does not need to be.
+* You cannot get me into legal trouble for breaking anything, nor can you get me into trouble for not helping you fix it.
+
+For more info, you can look at [the TLDR Legal page for the MPL](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2))
+## Support
 For support and to get new releases as quickly as possible, you can join the [MineCam Discord.](https://discord.gg/JfJ7R2X)
+
+## Versioning
+To make life easier for server admins, the version numbers used by this plugin is compliant with the [Semantic Versioning System](https://semver.org) **TL;DR:**
+* Each version number will be formatted like this: 1.0.0
+* The first number is rewrites (e.g. Minecraft version updates)
+* The second is feature updates
+* The third is patches (e.g. bug fixes.
