@@ -11,13 +11,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 
 public final class Main extends JavaPlugin {
-    public static FileConfiguration config;
 
     @Override
     public void onEnable() {
         // Plugin startup logic
         this.getCommand("camera").setExecutor(new commandCamera());
-        config = this.getConfig();
+        createYmls();
 
     }
 
@@ -39,6 +38,12 @@ public final class Main extends JavaPlugin {
         File data = new File(getDataFolder(), "data.yml");
         if (!data.exists()) {
             getLogger().info("Creating new data.yml");
+            try {
+             data.createNewFile();
+            }
+            catch (java.io.IOException e) {
+            getLogger().info("Error creating data.yml. Data will not be saved");
+            }
         }
     }
 }
