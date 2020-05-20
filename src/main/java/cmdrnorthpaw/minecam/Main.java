@@ -1,6 +1,8 @@
 package cmdrnorthpaw.minecam;
 
 import cmdrnorthpaw.minecam.commands.commandCamera;
+import org.bukkit.GameMode;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.Configuration;
@@ -9,15 +11,18 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class Main extends JavaPlugin {
+    public Map gamemodeDict = new HashMap<String, GameMode>();
+    public Map positionDict = new HashMap<String, Location>();
 
     @Override
     public void onEnable() {
         // Plugin startup logic
         this.getCommand("camera").setExecutor(new commandCamera());
         createYmls();
-
     }
 
     @Override
